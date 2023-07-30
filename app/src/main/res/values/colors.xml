@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="blond">#F7F7F7</color>
+    <color name="red">#F44236</color>
+    <color name="primary">#1FB8E9</color>
+    <color name="marron">#A6A6A6</color>
+    <color name="blue">#3F51B5</color>
+
+    //onboarding colors
+    <color name="background">#F0F4F3</color>
+    <color name="buttontext">#50C2C9</color>
+
+    //indicator color
+    <color name="inactive">#C4C4C4</color>
+    <color name="active">#50C2C9</color>
+
+    <!--<color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color> -->
+    <color name="orange">#F87C43</color>
+    <color name="gree">#40B49A</color>
+    <color name="black_shade">#76000000</color>
+    <color name="blu">#039BE5</color>
+    <color name="grayTransparent">#5E000000</color>
+    <color name="lightGreen">#ECF8F6</color>
+    <color name="silver">#C0C0C0</color>
+</resources>
