@@ -91,10 +91,11 @@
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/countryCode"
                 android:layout_width="0dp"
-                android:layout_height="70dp"
+                android:layout_height="65dp"
                 android:layout_weight="1"
                 android:background="@drawable/input_text_bg"
                 android:layout_marginStart="5dp"
+                android:layout_marginBottom="20dp"
                 />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -122,8 +123,6 @@
 
         </LinearLayout>
 
-
-
         <Button
             android:id="@+id/loginBtn"
             android:layout_width="match_parent"
@@ -134,8 +133,8 @@
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             />
 
 

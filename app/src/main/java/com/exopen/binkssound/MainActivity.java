@@ -11,13 +11,24 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import com.exopen.binkssound.AlertClass.FlagIntent;
+import com.exopen.binkssound.Class.Constant;
 import com.exopen.binkssound.Class.SharedPref;
-import com.exopen.binkssound.Fragment.CompteFacture;
+import com.exopen.binkssound.Fragment.Recherche;
 import com.exopen.binkssound.Fragment.Home;
-import com.exopen.binkssound.Fragment.Conseils;
-import com.exopen.binkssound.Fragment.Factures;
+import com.exopen.binkssound.Fragment.Profile;
+import com.exopen.binkssound.Fragment.Artistes;
+import com.exopen.binkssound.Identifiant.LogIn;
+import com.exopen.binkssound.Identifiant.SetUp;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,12 +67,12 @@ public class MainActivity extends AppCompatActivity {
                             tab.setText(R.string.rechercher);
                             break;
                         case 2:
-                            tab.setIcon(R.drawable.user_24);
+                            tab.setIcon(R.drawable.ic_account_24);
                             tab.setText(getString(R.string.artistes));
                             break;
                         case 3:
-                            tab.setIcon(R.drawable.ic_setting_24);
-                            tab.setText(getString(R.string.param_tres));
+                            tab.setIcon(R.drawable.user_24);
+                            tab.setText(getString(R.string.profil));
                             break;
                     }
                 }).attach();
@@ -82,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return new Home();
                 case 1:
-                    return new CompteFacture();
+                    return new Recherche();
                 case 2:
-                    return new Factures();
+                    return new Artistes();
                 case 3:
-                    return new Conseils();
+                    return new Profile();
 
                 default:
                     return null;
@@ -100,4 +111,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseAuth mAuth= FirebaseAuth.getInstance();
+        FirebaseUser user= mAuth.getCurrentUser();
+
+        DatabaseReference uRef= FirebaseDatabase.getInstance().getReference().child(Constant.user);
+
+        if (user== null){
+            new FlagIntent(this, LogIn.class);
+        }else {
+            String uid= mAuth.getCurrentUser().getUid();
+           uRef.child(uid).addValueEventListener(new ValueEventListener() {
+               @Override
+               public void onDataChange(@NonNull DataSnapshot snapshot) {
+                   if (!snapshot.exists()){
+                       new FlagIntent(MainActivity.this, SetUp.class);
+                   }
+               }
+               @Override
+               public void onCancelled(@NonNull DatabaseError error) {}
+           });
+        }
+    }
 }

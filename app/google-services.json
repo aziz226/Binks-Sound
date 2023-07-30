@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "103598602193",
+    "firebase_url": "https://b-sound-default-rtdb.firebaseio.com",
+    "project_id": "b-sound",
+    "storage_bucket": "b-sound.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103598602193:android:8ffe4063f5bf67d68592f0",
+        "android_client_info": {
+          "package_name": "com.exopen.binkssound"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103598602193-jjq91kfb0715r6b450pqg703hsmv1nk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWTtaE6bbku5Sv2yPy5YxtOcU6_17DweI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103598602193-jjq91kfb0715r6b450pqg703hsmv1nk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103598602193:android:b0440d07ace6013f8592f0",
+        "android_client_info": {
+          "package_name": "com.exopen.bsound"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103598602193-he2o29g1c80s4kp0j4ip1lvag0s2ghm6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.exopen.bsound",
+            "certificate_hash": "6f99eab030bc2a78d953e5759794ca0705045eef"
+          }
+        },
+        {
+          "client_id": "103598602193-jjq91kfb0715r6b450pqg703hsmv1nk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWTtaE6bbku5Sv2yPy5YxtOcU6_17DweI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103598602193-jjq91kfb0715r6b450pqg703hsmv1nk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

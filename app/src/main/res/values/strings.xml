@@ -30,5 +30,12 @@
     <string name="not_now">Pas maintenant</string>
     <string name="yes">Oui</string>
     <string name="non">Non</string>
+    <string name="erreur">Erreur</string>
+    <string name="veuilllez_entrer_votre_nom_et_pr_nom">Veuilllez entrer votre nom et prénom</string>
+    <string name="veuilllez_entrer_votre_nom_d_artiste">Veuilllez entrer votre nom d\'artiste</string>
+    <string name="veuilllez_entrer_votre_ville">Veuilllez entrer votre ville</string>
+    <string name="une_erreur_s_est_produit_veuillez_reessayer">Une erreur s\'est produit, Veuillez reessayer</string>
+    <string name="profil">Profil</string>
+    <string name="aboutText">A propos</string>
 
 </resources>

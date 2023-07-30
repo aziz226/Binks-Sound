@@ -104,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:hint="Nom d'artiste"
+                android:inputType="textCapSentences"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
                 android:paddingBottom="5dp" />

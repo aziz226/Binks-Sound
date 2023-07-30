@@ -142,7 +142,7 @@ public class OnBoarding extends AppCompatActivity {
     }
 
     private void startMainActivity() {
-        Intent i = new Intent(OnBoarding.this, LogIn.class);
+        Intent i = new Intent(OnBoarding.this, MainActivity.class);
         startActivity(i);
         finish();
     }
